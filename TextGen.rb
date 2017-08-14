@@ -2,7 +2,7 @@ require_relative '.\markov\MarkovDictionary'
 require_relative '.\markov\MarkovSentenceGenerator'
 
 puts "-- Setting up dictionary --"
-dict = MarkovDictionary.new("standard", 2)
+dict = MarkovDictionary.new("regham", 2)
 
 puts "-- Setting up sentence generator --"
 gen = MarkovSentenceGenerator.new(dict, 100, 50000)
