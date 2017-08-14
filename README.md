@@ -10,6 +10,8 @@ You must provide your bot's token and client id in Run.rb. You can get one by cr
 The server you invite this bot to will announce when it's started in any channel called ham_chamber.  
 The bot will log all chat it can read. Remove its read permissions on channels that are off-limits.  
 Logged chat will be saved in /dict/ham.txt.  
+The command for text generation from a particular dictionary will be the filename. (Plans to change this.)  
+There is a /help command that lists all dictionaries and their usage.
 *As the Discord server owner, you must send the /sleep command so the bot can save its currently open dictionaries.*  
 *Do not simply close the console window.*  
 Finally run Run.bat.  
