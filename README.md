@@ -6,7 +6,7 @@ It requires timeout, discordrb, and msgpack.
 The batch files assume your ruby installation is located in C:\Ruby23\bin\ruby.exe. You may need to change this.  
   
 __If you intend to run this as a bot:__  
-You must provide your bot's token and client id in Run.rb.  
+You must provide your bot's token and client id in Run.rb. You can get one by creating an app here, https://discordapp.com/developers/applications/me.  
 The server you invite this bot to will announce when it's started in any channel called ham_chamber.  
 The bot will log all chat it can read. Remove its read permissions on channels that are off-limits.  
 Logged chat will be saved in /dict/ham.txt.  
