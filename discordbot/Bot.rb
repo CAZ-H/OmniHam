@@ -63,7 +63,7 @@ class Bot
 
     # Recite all public commands.
     @bot.command(:help, bucket: :helpBucket, rate_limit_message: "Slow down please!") do |event, flag|
-      event.respond( @commands.get_help(@desc) )
+      event.respond( @commands.get_help(@desc, @prefix) )
     end
 
     # Sleep.
