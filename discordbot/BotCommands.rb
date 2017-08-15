@@ -38,19 +38,19 @@ class BotCommands
     return response
   end
 
-  def get_help(descHash)
+  def get_help(descHash, prefix)
     helpMsg = "**__The following are my public commands:__**\n\n"
 
     helpMsg = helpMsg + "__Markov chat bot commands:__\n"
     descHash.each_pair do |dictName, description|
-      helpMsg = helpMsg + "/" + dictName + " == " + description + "\n"
+      helpMsg = helpMsg + prefix + dictName + " == " + description + "\n"
     end
     helpMsg = helpMsg + "__Markov chat bot command flags:__\n"
     helpMsg = helpMsg + "-contain -c == (Default) Generate text containing the longest given word.\n"
     helpMsg = helpMsg + "-begin -b == Generate text beginning with the longest given word.\n"
     helpMsg = helpMsg + "-end -e == Generate text ending with the longest given word.\n\n"
 
-    helpMsg = helpMsg + "Markov chat bot command example: /dictName -b Hello there.\n" 
+    helpMsg = helpMsg + "Markov chat bot command example: " + prefix + "dictName -b Hello there.\n" 
     helpMsg = helpMsg + 'Might output: "Hello i am not a guy."'+"\n\n" 
     helpMsg = helpMsg + "I'm also listening to and learning from your conversations."
 
