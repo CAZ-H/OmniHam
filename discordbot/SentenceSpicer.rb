@@ -1,4 +1,3 @@
-
 class SentenceSpicer
 
   def initialize()
@@ -8,7 +7,7 @@ class SentenceSpicer
   # server: the server to get emoji from.
   # string: The string to add to.
   def self.add_emote(server, string)
-    if nil != server
+    if server
       emotes = server.emoji.values
     else
       emotes = []
