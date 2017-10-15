@@ -8,7 +8,7 @@ logFileName = "LOGFILE"
 # {"filename/commandname of .txt file in /dict, no file extension." => [chainDepth(2isGood), "Description of text file for help command."]}
 dicts = {
 	logFileName => [2, "Contains logged chat from Discord."],
-	"text" => [2, "Contains some cool text."],}
+	"treksample" => [2, "Contains transcripts from major Star Trek films."],}
 
 # Format:
 # ["A string to say when the bot starts up."]
