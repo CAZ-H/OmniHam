@@ -20,13 +20,13 @@ helloStrs =
 # ["A string to say when the bot shuts down."]
 byeStrs = 
 	["Goodnight!",
-		"Goodbye!"] 
+	"Goodbye!"] 
 
 # Format:
 # ["A string to say when the bot rejects answering a command."]
 rejectStrs = 
 	["You're not my mother!",
-		"Who are you?"] 
+	"Who are you?"] 
 
 # These are pretty self explanitory.
 # You can get the first two from here:
