@@ -1,3 +1,8 @@
+# Rewritten Marky-Markov gem. Most of the text splitting logic is not mine. 
+# Adapted to handle both forwards and backwards text generation.
+# Also a few other little tweaks to increase speed and accuracy 
+# regarding sentence generation around topic words.
+
 require 'msgpack'
 
 class MarkovDictionary
@@ -27,6 +32,8 @@ class MarkovDictionary
 
   end
 
+  # Debug
+  # Prints data members.
   def print_data_members()
     print @filename.to_s + "\n"
     print @dictionary.to_s + "\n"
@@ -39,6 +46,8 @@ class MarkovDictionary
     print @regexBracketCharacters.to_s + "\n"
   end
 
+  # Debug
+  # Prints the entire contents of the dictionary.
   def print_dict()
     @dictionary.each_pair do |wordArr, valArr|
       puts "ROOT: " << wordArr.to_s
@@ -287,9 +296,7 @@ class MarkovDictionary
   end
 
 
-
   private
-
 
 
   # Open and prepare the given file.
