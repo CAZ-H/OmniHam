@@ -48,6 +48,9 @@ class BotCommands
     helpMsg = "**__The following are my public commands:__**\n\n"
 
     helpMsg = helpMsg + "__Markov chat bot commands:__\n"
+    if descHash.size == 0 
+      helpMsg = helpMsg + "There are no dictionaries loaded!\n"
+    end
     descHash.each_pair do |dictName, description|
       helpMsg = helpMsg + prefix + dictName + " == " + description + "\n"
     end
