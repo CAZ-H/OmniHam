@@ -1,9 +1,13 @@
 
 class MarkovSentenceGenerator
 
-  def initialize(dictionary, lengthPersistence=100, wordRetries=50000, genRetries=20000)
+  # Could have made all these methods static but specifying the dictionary in every method call is a pain.
+  # So instead we initialize a sentence generator for every dictionary. In a memory-limited environment this is bad.
+  # dictionary is the markov dictionary to hook to.
+  # wordRetries is the number of times to retry finding a key containing a given word.
+  # genRetries is the number of times to generate a new word in search of a word that finishes the current sentence.
+  def initialize(dictionary, wordRetries=50000, genRetries=20000)
     @dictionary = dictionary
-    @lengthPersistence = lengthPersistence
     @wordRetries = wordRetries
     @generationRetries = genRetries
   end
