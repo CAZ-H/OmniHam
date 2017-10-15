@@ -51,9 +51,16 @@ class Bot
   # filename: The file to use.
   # depth: The depth to chain.
   def add_dictionary(filename, depth, desc)
+    begin
     @dict[filename] = MarkovDictionary.new(filename, depth)
     @desc[filename] = desc
     @sentenceGens[filename] = MarkovSentenceGenerator.new(@dict[filename])
+    rescue
+      puts("[Failed to find dictionary with filename" + filename.to_s + "]")
+      @dict.delete(filename)
+      @desc.delete(filename)
+      @sentenceGens.delete(filename)
+    end
   end
 
   # Add multiple dictionaries to the bot.
