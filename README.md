@@ -1,9 +1,10 @@
 # OmniHam
 A Markov-Chain chat bot designed to work with multiple dictionaries, log chat from Discord, and respond in Discord.  
 Developed on Ruby version 2.3.1.  
-It requires timeout, discordrb, and msgpack. You can install them with "gem install packageName" at commandline.
-  
-The batch files assume your ruby installation is located in C:\Ruby23\bin\ruby.exe. You may need to change this.  
+
+It requires timeout, discordrb, and msgpack. You can install them with "gem install packageName" at commandline. 
+The batch files assume your ruby installation is located in C:\Ruby23\bin\ruby.exe. You may need to change this. 
+This bot is not designed to be running on a large number of servers at the same time. 
   
 __If you intend to run this as a bot:__  
 You must provide your bot's token and client id in Run.rb. You can get one by creating an app here, https://discordapp.com/developers/applications/me.  
