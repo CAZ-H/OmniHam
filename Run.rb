@@ -1,19 +1,46 @@
-require_relative '.\discordbot\Bot'
+# Executable file for setup and booting bot.
+require_relative './discordbot/Bot'
 
+# The name of the file you want chat logs to be dumped into. No file extension.
+logFileName = "LOGFILE"
+
+# Format:
+# {"filename/commandname of .txt file in /dict, no file extension." => [chainDepth(2isGood), "Description of text file for help command."]}
 dicts = {
-	"ham" => [2, "Contains logged chat from Discord."],
-	"aniham" => [2, "Contains text from the first ten Animorphs books."],
-	"trekham" => [2, "Contains transcripts from all major Star Trek films."],
-	"regham" => [2, "Contains transcripts from assorted films, and other sources."]}
+	logFileName => [2, "Contains logged chat from Discord."],
+	"text" => [2, "Contains some cool text."],}
 
+# Format:
+# ["A string to say when the bot starts up."]
 helloStrs = 
 	["I have awoken!", 
-	"Bow before your god!", 
-	"Do you smell ham?", 
-	"Ready to ham!", 
-	"Prepare your hams!", 
-	"Do not fear, Ham is here!", 
-	"Time to sniff ham!"] 
+	"Do you smell ham?"] 
 
-bot = Bot.new('tokentokentokentokentoken', clientidhere, '/', helloStrs, dicts)
-bot.run()
+# Format:
+# ["A string to say when the bot shuts down."]
+byeStrs = 
+	["Goodnight!",
+		"Goodbye!"] 
+
+# Format:
+# ["A string to say when the bot rejects answering a command."]
+rejectStrs = 
+	["You're not my mother!",
+		"Who are you?"] 
+
+# These are pretty self explanitory.
+# You can get the first two from here:
+# https://discordapp.com/developers/applications/me
+token = 'SECRET APP BOT USER TOKEN'
+clientId = 000000000000000000
+commandPrefix = '/'
+botChannelName = "BOT_CHANNEL_NAME"
+joinChannelName = "JOIN_CHANNEL_NAME"
+logFileName = logFileName
+welcomeMessage = "Welcome!"
+
+# Don't change this.
+bot = Bot.new(token, clientId, commandPrefix, dicts, helloStrs, byeStrs, rejectStrs, botChannelName, joinChannelName, logFileName, welcomeMessage)
+if bot 
+	bot.run()
+end
