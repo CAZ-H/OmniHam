@@ -1,15 +1,18 @@
-require_relative '..\markov\MarkovDictionary'
-require_relative '..\markov\MarkovSentenceGenerator'
+require_relative '../markov/MarkovDictionary'
+require_relative '../markov/MarkovSentenceGenerator'
 require_relative 'SentenceSpicer'
 require 'discordrb'
 require 'timeout'
 
 class BotCommands
 
+  # gen is the markov sentenceGenerator to use.
+  # wordlen is the length of the sentence to aim for.
+  # timeout is how long to wait for a string before giving up.
   def initialize(gen, wordLen=30, timeout=40)
     @timeout = timeout
     @wordLength = wordLen
-    @gen = gen
+    @sentenceGens = gen
   end
 
   # Standard markov commands.
@@ -38,6 +41,9 @@ class BotCommands
     return response
   end
 
+  # Returns a help message describing all markov dictionaries. 
+  # descHash is a hash containing dictName keys and description values.
+  # prefix is the command prefix.
   def get_help(descHash, prefix)
     helpMsg = "**__The following are my public commands:__**\n\n"
 
@@ -57,20 +63,13 @@ class BotCommands
     return helpMsg
   end
 
-  # Returns true if the server creator calls the command, then saves all dictionaries.
-  # Returns false if anyone else calls the command, then does nothing.
-  # event: The MessageEvent.
+  # Saves all the currently open dictionaries.
   # dictsToSave: An array of dictionaries to save.
-  def kill_command(event, dictsToSave)
-    if event.author.distinct == "CaZsm#5532"
-      dictsToSave.each do |dict|
-        if nil != dict
-          dict.save()
-        end
+  def save_dicts(dictsToSave)
+    dictsToSave.each do |dict|
+      if nil != dict
+        dict.save()
       end
-      return true
-    else
-      return false
     end
   end
 
@@ -109,11 +108,11 @@ class BotCommands
   # filename: The name of the dictionary to use.
   def command_containing(stringArr, filename, event)
     keyword = getKeyword(stringArr)
-    if nil == @gen[filename] || nil == keyword
+    if nil == @sentenceGens[filename] || nil == keyword
       return nil
     end
       
-    string = @gen[filename].generate_containing(keyword, @wordLength).to_s
+    string = @sentenceGens[filename].generate_containing(keyword, @wordLength).to_s
     return decide_to_spice(string, event.server)
   end
 
@@ -122,11 +121,11 @@ class BotCommands
   # filename: The name of the dictionary to use.
   def command_begin(stringArr, filename, event)
     keyword = getKeyword(stringArr)
-    if nil == @gen[filename] || nil == keyword
+    if nil == @sentenceGens[filename] || nil == keyword
       return nil
     end
     
-    string = @gen[filename].generate_starting_with(keyword, @wordLength).to_s
+    string = @sentenceGens[filename].generate_starting_with(keyword, @wordLength).to_s
     return decide_to_spice(string, event.server)
   end
 
@@ -135,22 +134,22 @@ class BotCommands
   # filename: The name of the dictionary to use.
   def command_end(stringArr, filename, event)
     keyword = getKeyword(stringArr)
-    if nil == @gen[filename] || nil == keyword
+    if nil == @sentenceGens[filename] || nil == keyword
       return nil
     end
     
-    string = @gen[filename].generate_ending_with(keyword, @wordLength).to_s
+    string = @sentenceGens[filename].generate_ending_with(keyword, @wordLength).to_s
     return decide_to_spice(string, event.server)
   end
 
   # Generate a random string.
   # filename: The name of the dictionary to use.
   def command_random(filename, event)
-    if nil == @gen[filename]
+    if nil == @sentenceGens[filename]
       return nil
     end
 
-    string = @gen[filename].generate_random(@wordLength).to_s
+    string = @sentenceGens[filename].generate_random(@wordLength).to_s
     return decide_to_spice(string, event.server)
   end
 
