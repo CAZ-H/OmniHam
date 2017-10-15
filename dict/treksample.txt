@@ -71,7 +71,7 @@ PICARD (OC): Just what I was afraid of.
 RIKER: Captain, diverting to the Kolarin system takes us awfully close to the Romulan Neutral Zone.
 PICARD: It's still well on our side. I think... I think it's worth taking a look. Don't worry, Number One, we'll still have you to Betazed with plenty of time to spare...
 RIKER: Thank you, sir.
-PICARD: ...where we will all honour the Betazoid tradition. ...Now, if you’ll excuse me, ...I’ll be in the gym.
+PICARD: ...where we will all honour the Betazoid tradition. ...Now, if youâ€™ll excuse me, ...Iâ€™ll be in the gym.
 RIKER: Mister Branson, lay in a course for the Kolarin system. Warp five.
 LAFORGE: What do you think, Data? ...A long-lost relative?
 (the Enterprise arrives in orbit above Kolarus III)
@@ -127,7 +127,7 @@ PICARD: Data.
 CRUSHER: You know, all things considered, Data, I think you have nicer eyes.
 DATA: Our eyes are identical, Doctor.
 RIKER: So what have we got, Geordi?
-LAFORGE: Well, I'd say he has the same internal mechanics as Data but not as much positronic development. The neural pathways aren't nearly as sophisticated. I’d say he's a ...prototype. Something Doctor Soong created prior to Data.
+LAFORGE: Well, I'd say he has the same internal mechanics as Data but not as much positronic development. The neural pathways aren't nearly as sophisticated. Iâ€™d say he's a ...prototype. Something Doctor Soong created prior to Data.
 DATA: Do you have a name, sir?
 B-4 HEAD: I am ...B-4.
 PICARD: Be-four? Doctor Soong's penchant for whimsical names seems to have no end.
@@ -179,7 +179,7 @@ RIKER: But they also have the reputation of being formidable warriors. In the Do
 PICARD: Cannon fodder.
 LAFORGE: Yeah, but how did a Reman get to be Praetor? I don't get it.
 RIKER: We have to assume Romulan collaborators.
-PICARD: Coup d'état?
+PICARD: Coup d'Ã©tat?
 RIKER: The Praetor's power's always been the Romulan fleet. They must be behind Shinzon for him to have overthrown the Senate.
 PICARD: What have you learned about Shinzon?
 DATA: Starfleet intelligence was only able to provide a partial account of his military record. We can infer he is relatively young and a capable commander. He fought twelve major engagements in the war. All successful. Beyond that, we know nothing.
@@ -253,7 +253,7 @@ SHINZON: Oh I am, Commander Riker. ...May I touch your hair?
 PICARD: We came to Romulus on a matter we were assured was of great importance. If you have anything to say to us as representatives of the Federation, I suggest you do it now.
 SHINZON: Yes, I'm sorry, Captain. There is so much we need to talk about.
 PICARD: I would be interested to know what we're talking about.
-SHINZON: Unity, Captain! ...Tearing down the walls between us to recognise that we are one. ...I'm talking of the thing that makes us the same. ...Peace. We want peace. ...Right now, you’re thinking this all sounds too good to be true? But you're also thinking that the chance of peace is too promising to ignore. ...Am I right?
+SHINZON: Unity, Captain! ...Tearing down the walls between us to recognise that we are one. ...I'm talking of the thing that makes us the same. ...Peace. We want peace. ...Right now, youâ€™re thinking this all sounds too good to be true? But you're also thinking that the chance of peace is too promising to ignore. ...Am I right?
 PICARD: Yes.
 SHINZON: Then perhaps it's time to add some illumination into our discussion. Computer. Raise the lighting four levels.
 (Picard is astounded by Shinzon's facial appearance)
@@ -326,7 +326,7 @@ SHINZON: That is the single thought behind everything I have done. From building
 PICARD: But how many Romulans died for your freedom?
 SHINZON: Too many. But the point is finally the Empire is realising there is a better way. And that way is peace. ...You don't trust me.
 PICARD: I have no reason to.
-SHINZON: You have every reason. If you had lived my life and experienced the suffering of my people, you’d be standing where I am.
+SHINZON: You have every reason. If you had lived my life and experienced the suffering of my people, youâ€™d be standing where I am.
 PICARD: If you had lived my life you would understand my responsibility to the Federation. I cannot allow my personal feelings to unduly influence my decisions.
 SHINZON: All I have are my personal feelings. I want to know what it means to be human. The Remans have given me a future. You can tell me about my past.
 PICARD: I can tell you about my past.
@@ -1004,7 +1004,7 @@ RIKER: He's a little late, Geordi, ...can it wait?
 LAFORGE (on intercom): I don't think so.
 PICARD: Excuse me. Tell him I'm already here and I'll talk to him when he arrives.
 RIKER (OC): Geordi, the Captain would like you to come up here.
-LAFORGE (on intercom): Tell him we've received a communiqué from Admiral Dougherty. It's about Data.
+LAFORGE (on intercom): Tell him we've received a communiquÃ© from Admiral Dougherty. It's about Data.
 [Enterprise-E banquet room]
 
 (a string quartet of crewmembers plays Hayden)
@@ -1231,7 +1231,7 @@ WORF: Captain, Commander Data is safely in custody.
 
 (Picard, Troi, Crusher and an away team beam down into the village. The children are playing a game with balls using their feet and arms)
 GALLATIN: Captain, Subahdar Gallatin, Son'a Command.
-CURTIS: Lieutenant Curtis, attaché to Admiral Dougherty.
+CURTIS: Lieutenant Curtis, attachÃ© to Admiral Dougherty.
 PICARD: Are you all right?
 CURTIS: We've been treated extremely well.
 (Troi is watching the children play)
@@ -3043,7 +3043,7 @@ PICARD: Make it so.
 
 
 
-(a champagne bottle, Dom Pérignon 2265, tumbles through space to christen U.S.S. Enterprise NCC 1701-B in the view of a crowd watching from Spacedock)
+(a champagne bottle, Dom PÃ©rignon 2265, tumbles through space to christen U.S.S. Enterprise NCC 1701-B in the view of a crowd watching from Spacedock)
 
 [Enterprise-B bridge]
 
@@ -3418,17 +3418,17 @@ TROI: I've come to see if there's anything I can do for you.
 PICARD: Oh, it's just family matters. ...You never met my brother and his wife, did you?
 (Picard opens a photo-album that he had been studying)
 TROI: No.
-PICARD: Robert. ...So opinionated. So pompous and arrogant. He always had to have the last word. But he mellowed a little bit in the last few years. I was going to get together with them all next month on Earth. I thought we'd go to San Francisco. René's always wanted to see Starfleet Academy.
-TROI: René? Oh, your nephew.
+PICARD: Robert. ...So opinionated. So pompous and arrogant. He always had to have the last word. But he mellowed a little bit in the last few years. I was going to get together with them all next month on Earth. I thought we'd go to San Francisco. RenÃ©'s always wanted to see Starfleet Academy.
+TROI: RenÃ©? Oh, your nephew.
 PICARD: He's so unlike his father. He's a dreamer. Imaginative. ...Very gentle.
 TROI: What's happened?
-PICARD: Robert and René, they're... ...burned to death in a fire.
+PICARD: Robert and RenÃ©, they're... ...burned to death in a fire.
 TROI: I'm sorry.
 PICARD: That's all right, Counselor. These things happen.
 TROI: Captain, it's not all right.
-PICARD: I can't help keep thinking about ...about all the experiences that René is not going to have. Not going to Academy, reading books and listening to music, falling in love. ...Building a life. ...Well, it's not going to happen now.
+PICARD: I can't help keep thinking about ...about all the experiences that RenÃ© is not going to have. Not going to Academy, reading books and listening to music, falling in love. ...Building a life. ...Well, it's not going to happen now.
 TROI: I didn't realise he meant so much to you.
-PICARD: I'd come to feel that René was as close as I would get to having a child of my own.
+PICARD: I'd come to feel that RenÃ© was as close as I would get to having a child of my own.
 TROI: Your family history is very important to you, isn't it?
 PICARD: Right. Oh, ...from being a small child, I can remember being told about the family line. The Picard who fought at Trafalgar. The Picard who won the Nobel Prize for chemistry. The Picard's who settled the first Martian colony. When Robert married and had a son, I...
 TROI: ...You felt it was no longer your responsibility to carry on the family line.
@@ -3842,12 +3842,12 @@ MIMI PICARD: I love you, father.
 PICARD: And I love you too.
 ELISE PICARD: Move back and give your father some room. ...Cup of Earl Grey?
 PICARD: That would be perfect, dear.
-RENÉ PICARD: This one's for you.
-PICARD: Oh, thank you very much, René.
-RENÉ PICARD: Merry Christmas, uncle.
+RENÃ‰ PICARD: This one's for you.
+PICARD: Oh, thank you very much, RenÃ©.
+RENÃ‰ PICARD: Merry Christmas, uncle.
 PICARD: And Merry Christmas to you too.
-ELISE PICARD (OC): René, can you help me with the table?
-PICARD: René! ...Come here. ...Go and help your aunt.
+ELISE PICARD (OC): RenÃ©, can you help me with the table?
+PICARD: RenÃ©! ...Come here. ...Go and help your aunt.
 (Picard notices a spherical decoration blinking on the Christmas tree. It reminds him of the Veridian sun going out)
 PICARD: This isn't right. ...This can't be real.
 GUINAN (OC): It's as real as you want it to be.
