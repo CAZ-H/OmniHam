@@ -13,7 +13,7 @@ The bot will log all chat it can read. Remove its read permissions on channels t
 Logged chat will be saved in /dict/specifiedlogfilenameinRunrb.txt.  
 The command for text generation from a particular dictionary will be the filename. (Plans to change this.)  
 There is a /help command that lists all dictionaries and their usage.  
-*As the Discord server owner, you must send the /sleep command so the bot can save its currently open dictionaries.*  
+*As the bot owner, you must send the /sleep command so the bot can save its currently open dictionaries.*  
 *Do not simply close the console window.*  
 Finally run Run.bat.  
   
