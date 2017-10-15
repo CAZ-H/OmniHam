@@ -7,9 +7,9 @@ The batch files assume your ruby installation is located in C:\Ruby23\bin\ruby.e
   
 __If you intend to run this as a bot:__  
 You must provide your bot's token and client id in Run.rb. You can get one by creating an app here, https://discordapp.com/developers/applications/me.  
-The server you invite this bot to will announce when it's started in any channel called ham_chamber.  
+The server you invite this bot to will announce when it's started in any channel with the name you specify in Run.rb. 
 The bot will log all chat it can read. Remove its read permissions on channels that are off-limits.  
-Logged chat will be saved in /dict/ham.txt.  
+Logged chat will be saved in /dict/specifiedlogfilenameinRunrb.txt.  
 The command for text generation from a particular dictionary will be the filename. (Plans to change this.)  
 There is a /help command that lists all dictionaries and their usage.  
 *As the Discord server owner, you must send the /sleep command so the bot can save its currently open dictionaries.*  
@@ -17,7 +17,6 @@ There is a /help command that lists all dictionaries and their usage.
 Finally run Run.bat.  
   
 __If you simply want to generate sentences:__  
-The dictionary used is defined near the top of TextGen.rb.  
 Run Gen.bat. 
 Type a keyword or a sentence and press Enter.  
 It will generate a few sentences containing either the given keyword or the longest word from the given sentence.  
