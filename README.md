@@ -27,7 +27,7 @@ Type 'q' in the console and press Enter to exit gracefully, or close the console
 __Adding new texts:__  
 A new text to generate from can be added to the bot by adding a new txt file containing your text in /dict.  
 You must also add the dictionary to the bot by adding it to the hash in Run.rb.  
-"yourFilenameNoFileExtension" => [chainDepth(2isGood), "A description of your dictionary for the help command."]  
+"yourFilenameNoFileExtension" => [chainDepth2isGood, "A description of your dictionary for the help command."]  
   
 __Dict files:__  
 A dict file will be generated if one with the same filename as its corresponding txt file does not already exist.  
