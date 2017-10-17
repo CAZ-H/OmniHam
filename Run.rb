@@ -36,7 +36,6 @@ clientId = 000000000000000000
 commandPrefix = '/'
 botChannelName = "BOT_CHANNEL_NAME"
 joinChannelName = "JOIN_CHANNEL_NAME"
-logFileName = logFileName
 welcomeMessage = "Welcome!"
 
 # Don't change this.
