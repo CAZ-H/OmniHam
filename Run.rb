@@ -5,7 +5,7 @@ require_relative './discordbot/Bot'
 logFileName = "LOGFILE"
 
 # Format:
-# {"filename/commandname of .txt file in /dict, no file extension." => [chainDepth(2isGood), "Description of text file for help command."]}
+# {"filename/commandname of .txt file in /dict, no file extension." => [chainDepth2isGood, "Description of text file for help command."]}
 dicts = {
 	logFileName => [2, "Contains logged chat from Discord."],
 	"treksample" => [2, "Contains transcripts from major Star Trek films."],}
