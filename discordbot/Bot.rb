@@ -126,7 +126,7 @@ class Bot
       channel = (event.server.channels.keep_if{|chan| chan.name == @joinChannelName} )[0]
       if not channel or not @welcomeMessage or @welcomeMessage=="" then return end
 
-      @bot.send_message(channel, "<!" + event.user.id.to_s + "> " + @welcomeMessage)
+      @bot.send_message(channel, "<@!" + event.user.id.to_s + "> " + @welcomeMessage)
     end
 
     @bot.sync
