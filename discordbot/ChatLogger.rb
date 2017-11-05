@@ -5,6 +5,7 @@ class ChatLogger
   def initialize()
     @lastSpeaker = ""
     @lastMessage = ""
+    @openDicts = Hash.new
   end
 
   # Entrance method for handling a chat message.
@@ -18,6 +19,13 @@ class ChatLogger
     log_message(event, dict)
   end
 
+  # Closes all open file handles.
+  def close_open_logs()
+    @openDicts.each_pair do |filename, file|
+      file.close
+      @openDicts.delete(filename)
+    end
+  end
 
   private 
 
@@ -31,24 +39,29 @@ class ChatLogger
 
     dict.parse_source(message, false)
 
-    if File.exists?('./dict/' + dict.filename + ".txt")
-      File.open('./dict/' + dict.filename + ".txt", "a") do |file|
-        authorName = event.author.name
-
-        if authorName == @lastSpeaker
-          file.print( " " + message.gsub("\r\n","") + " ")
-        elsif dict.is_punctuated?(@lastMessage) or @lastMessage == ""
-          file.print("\r\n" + message )
-        else
-          file.print(".\r\n" + message )
-        end
-        @lastSpeaker = authorName
-        @lastMessage = message
+    # Open and add the dictionary to the list of open dictionaries if not yet open.
+    if !@openDicts[dict.filename] then
+      if File.exists?('./dict/' + dict.filename + ".txt")
+        @openDicts[dict.filename] = File.open('./dict/' + dict.filename + ".txt", "a")
+      else
+        raise FileNotFoundError.new("./dict/#{dict.filename}.txt does not exist!")
       end
-    else
-      raise FileNotFoundError.new("./dict/#{dict.filename}.txt does not exist!")
     end
 
+    # Log chat to that open dictionary txt as normal.
+    file = @openDicts[dict.filename]
+
+    authorName = event.author.name
+    if authorName == @lastSpeaker
+      file.print( " " + message.gsub("\r\n","") + " ")
+    elsif dict.is_punctuated?(@lastMessage) or @lastMessage == ""
+      file.print("\r\n" + message )
+    else
+      file.print(".\r\n" + message )
+    end
+    file.flush
+    @lastSpeaker = authorName
+    @lastMessage = message
   end
 
 end
