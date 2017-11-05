@@ -101,27 +101,32 @@ class Bot
     # Sleep.
     @bot.command(:sleep, bucket: :hamBucket, rate_limit_message: "Slow down please!") do |event, flag|
       if event.author == @bot.bot_application.owner
+        # Save and close everything.
         @commands.save_dicts(@dict.values)
+        @logger.close_open_logs()
 
+        # Say goodnight.
         if bot_can_respond?(@bot, event) and @byeStrings.size > 0
           event.respond(@byeStrings.sample)
         end
 
+        # Set status to offline and stop the bot.
         @bot.invisible
         @bot.stop
       else
+        # Respond with a no-no.
         if bot_can_respond?(@bot, event) and @rejectStrings.size > 0
           event.respond(@rejectStrings.sample)
         end
       end
     end
 
-    # Logger.
+    # Chat logger.
     @bot.message do |event|
       @logger.process_message(event, @dict[@logFilename], @prefix)
     end
 
-    # Join Message.
+    # Member join Message.
     @bot.member_join do |event|
       channel = (event.server.channels.keep_if{|chan| chan.name == @joinChannelName} )[0]
       if not channel or not @welcomeMessage or @welcomeMessage=="" then return end
