@@ -131,6 +131,17 @@ class MarkovSentenceGenerator
   # Returns a string generated from a random word.
   # desiredWords: The length of the sentence desired.
   def generate_random(desiredWords=5)
+    # Validate input.
+    if desiredWords < 5
+      desiredWords = 5
+    end
+
+    word = @dictionary.random_word()
+    return generate_containing(word, desiredWords)
+
+    # This code has a tendency to generate all caps sentences and can be shortened by using other code.
+    # It was also causing a memory leak? Need to look closer to figure out why.
+=begin
     sentence = @dictionary.random_capitalized_word()
 
     # Validate input.
@@ -143,7 +154,8 @@ class MarkovSentenceGenerator
       # Get a nextWord for the previous @depth words in sentence.
       nextWord = @dictionary.random_next_word(sentence.last(@dictionary.depth))
 
-      if @dictionary.is_punctuation?(nextWord)
+      # There's a possibility there's not enough words in the dictionary, so if this is nil treat it as punctuation.
+      if nil == nextWord or @dictionary.is_punctuation?(nextWord)
         # Append the punctuation to the last word.
         sentence[-1] = sentence.last.dup << nextWord
       else
@@ -158,6 +170,7 @@ class MarkovSentenceGenerator
     end
 
     return sentence.join(" ")
+=end
   end
 
 
@@ -230,7 +243,6 @@ class MarkovSentenceGenerator
     if !@dictionary.is_punctuated?(sentence.last)
       sentence[-1] = sentence.last.dup << @dictionary.punctuation.sample
     end
-
 
     # Capitalize if we're not capitalized.
     if !@dictionary.is_capitalized?(sentence.first)
