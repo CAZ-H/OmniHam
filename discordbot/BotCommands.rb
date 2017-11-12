@@ -13,6 +13,8 @@ class BotCommands
     @timeout = timeout
     @wordLength = wordLen
     @sentenceGens = gen
+
+    @previousMemUsage = 0
   end
 
   # Standard markov commands.
@@ -74,6 +76,19 @@ class BotCommands
         dict.save()
       end
     end
+  end
+
+  # Returns the program's memory usage in kilobytes as an integer.
+  # Records this number as previous memory usage.
+  # This only works on linux! Need to look into doing this with Windows.
+  def get_mem_usage()
+    @previousMemUsage = `ps -o rss= -p #{Process.pid}`.to_i()
+    return @previousMemUsage
+  end
+
+  # Fetches the memory usage recorded at the last call of get_mem_usage.
+  def get_prev_mem_usage()
+    return @previousMemUsage
   end
 
 
