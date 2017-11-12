@@ -98,6 +98,14 @@ class Bot
       end
     end
 
+    # Report current memory usage.
+    # Only works when run on linux!
+    @bot.command(:memory, bucket: :helpBucket, rate_limit_message: "Slow down please!") do |event, flag|
+      if bot_can_respond?(@bot, event)
+        event.respond( "Previously I was using " + @commands.get_prev_mem_usage().to_s() + " kilobytes of memory.\n" + "I am now using " + @commands.get_mem_usage().to_s() + " kilobytes of memory." )
+      end
+    end
+
     # Sleep.
     @bot.command(:sleep, bucket: :hamBucket, rate_limit_message: "Slow down please!") do |event, flag|
       if event.author == @bot.bot_application.owner
