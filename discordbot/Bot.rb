@@ -29,6 +29,7 @@ class Bot
 
     @wordLength = 30
     @timeout = 60
+    @numSentences = 1
 
     @dict = Hash.new
     @desc = Hash.new
@@ -86,7 +87,7 @@ class Bot
       commandName = dictName.gsub(/\s+/,"_").downcase.to_sym
       @bot.command(commandName, bucket: :hamBucket, rate_limit_message: "Slow down please!") do |event, flag|
         if bot_can_respond?(@bot, event)
-          event.respond( @commands.markov_command(event, flag, dictName) )
+          event.respond( @commands.markov_command(event, flag, @numSentences, dictName) )
           GC.start
         end
       end
@@ -96,6 +97,14 @@ class Bot
     @bot.command(:help, bucket: :helpBucket, rate_limit_message: "Slow down please!") do |event, flag|
       if bot_can_respond?(@bot, event)
         event.respond( @commands.get_help(@desc, @prefix) )
+      end
+    end
+
+    # Set the num sentences.
+    @bot.command(:setlength, bucket: :hamBucket, rate_limit_message: "Slow down please!") do |event, num|
+      @numSentences = [1, [num.to_i, 8].min].max # Clamp between 1 and 8.
+      if bot_can_respond?(@bot, event)
+        event.respond( "Number of sentences to generate set to " + @numSentences.to_s + "." )
       end
     end
 
