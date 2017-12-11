@@ -21,22 +21,36 @@ class BotCommands
   # event: The discord event.
   # flag: The mode flag or else first word of the event content.
   # dictName: The name of the dictionary to use.
-  def markov_command(event, flag, dictName)
+  def markov_command(event, flag, numSentences, dictName)
     input = event.content.split(" ")
     stringArr = input.drop(2)
-    response = "Sorry, timed out!"
+    response = ""
 
-    Timeout::timeout(@timeout) do
+    if numSentences <= 0
+      numSentences = 1
+    end
+
+      Timeout::timeout(@timeout * numSentences) do
       if nil == flag
-        response = command_random(dictName, event)
+        for i in 1..numSentences do
+          response = response + command_random(dictName, event) + " "
+        end
       elsif flag.eql?("-contain") || flag.eql?("-c")
-        response = command_containing(stringArr, dictName, event)
+        for i in 1..numSentences do
+          response = response + command_containing(stringArr, dictName, event) + " "
+        end
       elsif flag.eql?("-begin") || flag.eql?("-b")
-        response = command_begin(stringArr, dictName, event)
+        for i in 1..numSentences do
+          response = response + command_begin(stringArr, dictName, event) + " "
+        end
       elsif flag.eql?("-end") || flag.eql?("-e")
-        response = command_end(stringArr, dictName, event)
+        for i in 1..numSentences do
+          response = response + command_end(stringArr, dictName, event) + " "
+        end
       elsif nil != input
-        response = command_containing(input.drop(1), dictName, event)
+        for i in 1..numSentences do
+        response = response + command_containing(input.drop(1), dictName, event) + " "
+        end
       end
     end
 
