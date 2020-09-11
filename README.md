@@ -1,3 +1,6 @@
+This version of the bot is currently abandoned, pending a rewrite someday.  
+It probably still works?
+
 # OmniHam
 A Markov-Chain chat bot designed to work with multiple dictionaries, log chat from Discord, and respond in Discord.  
 Developed on Ruby version 2.3.1.  
